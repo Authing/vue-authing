@@ -1,6 +1,6 @@
 import Authing from 'authing-js-sdk';
 
-export default {
+let VueAuthing = {
   async install(Vue, defaultOptions = {}) {
 
     let validAuth = null;
@@ -27,5 +27,9 @@ export default {
         });
       },
     });
-   }
+  }
 }
+
+module.exports = {
+  VueAuthing: VueAuthing
+};

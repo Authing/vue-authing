@@ -4,7 +4,7 @@ const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPl
 const webConfig = {
 	target: 'web',
 	mode: 'development',
-	entry: './index.js',
+	entry: './src/vue-authing.js',
 	output: {
 		libraryTarget: 'umd',
 		path: __dirname + '/dist',
@@ -33,7 +33,7 @@ const webConfig = {
 const webMinConfig = {
 	target: 'web',
 	mode: 'production',
-	entry: './index.js',
+	entry: './src/vue-authing.js',
 	output: {
 		libraryTarget: 'umd',
 		path: __dirname + '/dist',
