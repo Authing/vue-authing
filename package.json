@@ -1,0 +1,27 @@
+{
+  "name": "vue-authing",
+  "version": "0.0.1",
+  "description": "An authing middleware for vue",
+  "main": "dist/vue-authing.js",
+  "directories": {
+    "example": "example"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Authing/vue-authing.git"
+  },
+  "keywords": [
+    "authing",
+    "vue",
+    "jwt"
+  ],
+  "author": "xieyang@dodora.cn",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Authing/vue-authing/issues"
+  },
+  "homepage": "https://github.com/Authing/vue-authing#readme"
+}
