@@ -5,14 +5,10 @@ export default {
 
     let validAuth = null;
 
-    //5a9fa26cf8635a000185528c
-    //427e24d3b7e289ae9469ab6724dc7ff0
-
     Vue.mixin({
       beforeCreate() {
-        var self = this;
-        Object.defineProperty(this, "$authing", {
-          get: async function(){
+        Object.defineProperty(this, "$_authing", {
+          async get () {
             if (validAuth) {
               return validAuth;
             } else {
@@ -20,11 +16,11 @@ export default {
                 clientId: defaultOptions.clientId,
                 secret: defaultOptions.secret,
               });
-              this.authing = await validAuth;
+              this.$authing = await validAuth;
               return validAuth;
             }
           },
-          set: function(){
+          async set () {
             return validAuth;
           },
           enumerable: true,

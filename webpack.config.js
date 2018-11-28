@@ -1,29 +1,6 @@
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
-const nodeConfig = {
-	target: 'node',
-	mode: 'development',
-	entry: './index.js',
-	output: {
-		libraryTarget: 'umd',
-		path: __dirname + '/dist',
-		filename: 'authing-js-sdk.js'
-	},
-	module: {
-		rules: [{
-			test: /\.js$/,
-			use: {
-				loader: 'babel-loader',
-				options: {
-					presets: ["env", "stage-0"] // env --> es6, stage-0 --> es7, react --> react
-				}
-			},
-			exclude: /node_modules/
-		}]
-	}
-};
-
 const webConfig = {
 	target: 'web',
 	mode: 'development',
@@ -31,7 +8,7 @@ const webConfig = {
 	output: {
 		libraryTarget: 'umd',
 		path: __dirname + '/dist',
-		filename: 'authing-js-sdk-browser.js'
+		filename: 'vue-authing.js'
 	},
 	module: {
 		rules: [{
@@ -60,7 +37,7 @@ const webMinConfig = {
 	output: {
 		libraryTarget: 'umd',
 		path: __dirname + '/dist',
-		filename: 'authing-js-sdk-browser.min.js'
+		filename: 'vue-authing.min.js'
 	},
 	module: {
 		rules: [{
@@ -108,4 +85,4 @@ const webMinConfig = {
 	}
 };
 
-module.exports = [nodeConfig, webConfig, webMinConfig];
+module.exports = [webConfig, webMinConfig];
