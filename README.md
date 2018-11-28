@@ -33,5 +33,10 @@ new Vue({
 async beforeCreate() {
     await this.$_authing;
     console.log(this.$authing);
+
+    // e.g this.$authing.login
+    // e.g this.$authing.register
 }
 ```
+
+获取Client ID和Client Secret，请[点击这里](https://docs.authing.cn/#/quick_start/howto)。
